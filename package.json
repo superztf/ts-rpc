@@ -1,0 +1,25 @@
+{
+  "name": "ts-rpc",
+  "version": "0.0.1",
+  "description": "This is a simple RPC framwork.It serves a small amount services well.",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node bin/test/start_server.js",
+    "client1": "node bin/test/start_client1.js",
+    "client2": "node bin/test/start_client2.js"
+  },
+  "author": "zhengtengfei",
+  "files": [
+    "bin/",
+    "types/"
+  ],
+  "types": "./types/index.d.ts",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.12.10",
+    "log4js": "^3.0.6",
+    "tslint": "^5.11.0"
+  },
+  "dependencies": {}
+}
