@@ -2,8 +2,11 @@
 # ts-rpc [![Build Status](https://travis-ci.org/superztf/ts-rpc.svg?branch=master)](https://travis-ci.org/superztf/ts-rpc)
 
 readme is under editing...
-See src/test for typescript example
-See bin/test for javascript example
+* npm i ts-rpc-node
+* [source code](https://github.com/superztf/ts-rpc)
+* See src/test for typescript example
+* See bin/test for javascript example
+
 
 # Concept
 ## Notice
