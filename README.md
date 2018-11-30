@@ -1,7 +1,7 @@
 
 readme is under editing...
 
- # Concept
+# Concept
 ## Notice
 ## Request
 ## Response
@@ -21,12 +21,3 @@ Parameters:
 Returns:
 * Function
 
-
-\\ 
-
- \\ 
-  \\ 
-   \\ _____________
-   |              |
-   | proxy server |
-   |______________|

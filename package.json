@@ -2,6 +2,14 @@
   "name": "ts-rpc",
   "version": "0.0.1",
   "description": "This is a simple RPC framwork.It serves a small amount services well.",
+  "keywords": [
+    "rpc",
+    "javascript",
+    "node",
+    "nodejs",
+    "remote procedure call",
+    "typescript"
+  ],
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
