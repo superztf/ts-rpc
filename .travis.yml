@@ -13,6 +13,7 @@ install:
 script:
   - tslint -p .
   - tsc -p .
+  - npm run test
 notifications:
   email:
     on_success: never
