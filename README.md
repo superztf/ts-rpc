@@ -3,7 +3,7 @@
 [![npm version](https://badge.fury.io/js/ts-rpc-node.svg)](https://www.npmjs.com/package/ts-rpc-node)
 [![npm](https://img.shields.io/npm/dt/ts-rpc-node.svg)](https://www.npmjs.com/package/ts-rpc-node)
 [![NpmLicense](https://img.shields.io/npm/l/ts-rpc-node.svg)](https://www.npmjs.com/package/ts-rpc-node)
-
+[![Coverage Status](https://coveralls.io/repos/github/superztf/ts-rpc/badge.svg?branch=master)](https://coveralls.io/github/superztf/ts-rpc?branch=master)
 
 
 # ts-rpc
