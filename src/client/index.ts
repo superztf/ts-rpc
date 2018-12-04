@@ -134,6 +134,10 @@ class ClientHandle extends EventEmitter {
         });
     }
 
+    public SetEnv(app: any) {
+        this.rpcmodule.app = app;
+    }
+
     /**
      * Disconnect from proxy server and release all references
      * @method
@@ -230,10 +234,11 @@ class ClientHandle extends EventEmitter {
 /**
  * connnect proxyserver
  * @param {IClientOptions} opts
- * @param {Object} app
- * @param {createClient-CallBack} cb
+ * @param {Object} [app]
+ * @param {createClient-CallBack} [cb]
+ * @returns {ClientHandle}
  */
-export function createClient(opts: IClientOptions, app: any, cb?: (err: Error | null, obj: ClientHandle) => void): ClientHandle {
+export function createClient(opts: IClientOptions, app?: any, cb?: (err: Error | null, obj: ClientHandle) => void): ClientHandle {
     if (!cb) {
         // tslint:disable-next-line:no-empty
         cb = () => { };
@@ -252,9 +257,9 @@ export function createClient(opts: IClientOptions, app: any, cb?: (err: Error | 
  * the same as createClient,but return ClientHandle as a promise
  * @see createClient
  * @param {IClientOptions} opts
- * @param {Object} app
+ * @param {Object} [app]
  * @returns {Promise<ClientHandle>}
  */
-export async function createClientSync(opts: IClientOptions, app: any): Promise<ClientHandle> {
+export async function createClientSync(opts: IClientOptions, app?: any): Promise<ClientHandle> {
     return await nodeutil.promisify(createClient)(opts, app);
 }

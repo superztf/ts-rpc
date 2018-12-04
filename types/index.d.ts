@@ -1,4 +1,4 @@
-declare module 'ts-rpc' {
+declare module 'ts-rpc-node' {
     /// <reference types="node" />
     import { EventEmitter } from 'events';
     /**
@@ -82,6 +82,15 @@ declare module 'ts-rpc' {
         private tempfunopts;
 
         constructor(opts: IClientOptions, app: any, cb: Function);
+
+        /**
+         * Set the running context for other app's rpc
+         * @method
+         * @param {any} app
+         * @returns
+         */
+        public SetEnv(app: any): void;
+
         /**
          * Disconnect from proxy server and release all references
          * @method
@@ -121,10 +130,11 @@ declare module 'ts-rpc' {
     /**
      * connnect proxyserver
      * @param {IClientOptions} opts
-     * @param {Object} app
-     * @param {createClient-CallBack} cb
+     * @param {Object} [app]
+     * @param {createClient-CallBack} [cb]
+     * @returns {ClientHandle}
      */
-    export function createClient(opts: IClientOptions, app: any, cb?: (err: Error | null, obj: ClientHandle) => void): ClientHandle;
+    export function createClient(opts: IClientOptions, app?: any, cb?: (err: Error | null, obj: ClientHandle) => void): ClientHandle;
     /** createClient's callback function
      * @see createClient
      * @callback createClient-CallBack
@@ -136,10 +146,10 @@ declare module 'ts-rpc' {
      * the same as createClient,but return ClientHandle as a promise
      * @see createClient
      * @param {IClientOptions} opts
-     * @param {Object} app
+     * @param {Object} [app]
      * @returns {Promise<ClientHandle>}
      */
-    export function createClientSync(opts: IClientOptions, app: any): Promise<ClientHandle>;
+    export function createClientSync(opts: IClientOptions, app?: any): Promise<ClientHandle>;
 
     /**
      * =================Server API======================
@@ -152,7 +162,7 @@ declare module 'ts-rpc' {
     export class ServerHandle {
         /**
          * Open tokencheck by setting true, close by false. True is Default.
-         * If setting false, checking will not effect either client sends token or not.
+         * If it's false, checking will not effect either client sends token or not.
          * @member {boolean}
          */
         public tokencheck: boolean;

@@ -6,10 +6,10 @@ import { EventEmitter } from 'events';
 export class RPCModule extends EventEmitter implements IRPCReciver {
     public userEncode: ((args: any[]) => string | Buffer) | null = null;
     public userDecode: ((str: string | Buffer) => any[]) | null = null;
+    public app: any;
     private manager: ClientManager;
     private seqID: number = 0;
     private callbacks: Map<number, { time: number, next: Function }> = new Map();
-    private app: any;
     private clientopts: IClientOptions;
     private getcoding: string = 'utf8';
     private intervalhd: NodeJS.Timeout | undefined;
