@@ -239,7 +239,7 @@ Parameters:
 * <code>[cb]</code> &laquo;Function&raquo;
 
 Returns:
-* <a href="#link:ClientHandle">&laquo;ClientHandle&laquo;</a>
+* <a href="#link:ClientHandle">&laquo;ClientHandle&raquo;</a>
 
 ## createClientSync
 Parameters:
